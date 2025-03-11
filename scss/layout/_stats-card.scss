@@ -1,0 +1,133 @@
+.insights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 0;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .insights__content {
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+  }
+  
+  .insights__title {
+    margin-bottom: 1rem; 
+  }
+  
+  .insights__description {
+    margin-bottom: 1.5rem; 
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .insights__image {
+    order: -1;
+    width: 100%;
+    max-width: 100%;
+    position: relative; 
+  }
+  
+  .insights__image--header {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* New overlay styles */
+  .insights__image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 64%, 61%);
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+  }
+  
+  .insights__stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .insights__stat {
+    margin-bottom: 1rem; 
+    text-align: center;
+  }
+  
+  .insights__stat-number {
+    font-weight: bold;
+    margin-bottom: 0.25rem; 
+  }
+  
+  .insights__stat-label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  @media (min-width: 768px) {
+    .insights {
+      flex-direction: row;
+      text-align: left;
+      align-items: stretch;
+      width: 80%;
+    }
+    
+    .insights__content {
+      flex: 1;
+      max-width: 50%;
+      padding: 4rem;
+    }
+    
+    .insights__title {
+      text-align: left;
+      margin-bottom: 1.5rem; 
+    }
+    
+    .insights__description {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 3rem; 
+    }
+    
+    .insights__image {
+      display: block;
+      order: 1;
+      flex: 1;
+      max-width: 50%;
+    }
+    
+    .insights__image--header {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .insights__stats {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .insights__stat {
+      margin-bottom: 0;
+      text-align: center;
+      margin-right: 2rem;
+    }
+    
+    .insights__stat:last-child {
+      margin-right: 0;
+    }
+  }

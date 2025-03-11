@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+
+// 400 - regular
+// 700 - bold
+// font, size, weight, line height, letter spacing
+
+// @include typography ($font-family-primary, 1.75rem, 700, 213.33%, 0px);
+// @include typography($font-family-primary, 0.938rem, 400, 166.67%, 0px);
+// @include typography($font-family-primary, 1.5rem, 700,120%, 0px);
+// @include typography($font-family-secondary, .75rem, 400, 166.67%, 1px);
+
+
+// Custom Typography Classes
+
+.sm-text {
+    @include typography($font-family-secondary, .75rem, 300, 25px, 1px);
+    color: $white;
+  }
+  
+  .md-text {
+    @include typography($font-family-primary, 0.938rem, 400, 166.67%, 0);
+  }
+  
+  .xl-text {
+    @include typography($font-family-primary, 1.75rem, 700, 32px, 0);
+  }
+  
+  .lg-text {
+    @include typography($font-family-primary, 1.5rem, 700, 18px, 0);
+    color: $white;
+  }
+  
+
+  // Text With Colors
+
+  .md-text-white {
+    @include typography($font-family-primary, 0.938rem, 250, 166.67%, 0);
+    color: $white;
+  }
+
+  .xl-text-white {
+    @include typography($font-family-primary, 1.75rem, 700, 32px, 0);
+    color: $white;
+  }
+
+  .xl-text-purple {
+    @include typography($font-family-primary, 1.75rem, 700, 32px, 0);
+    color: $violet-accent;
+  }
